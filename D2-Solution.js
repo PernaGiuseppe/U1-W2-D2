@@ -2,44 +2,46 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-const num1 = 33
-const num2 = 13
+let x = 4
+let y = 7
 
-if (num1 > num2) {
-  console.log('Sono maggiore')
+if (x > y) {
+  console.log('Il numero più grande è', x)
+} else if (x < y) {
+  console.log('Il numero più grande è', y)
+} else {
+  console.log('I numeri sono uguali')
 }
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
-const eqnum1 = 5
-const eqnum2 = 15
+let x1 = 7
 
-if (eqnum1 !== eqnum2) {
-  console.log('Not equal')
+if (x1 !== 5) {
+  console.log('not equal')
 }
 
 /* ESERCIZIO 3
-  Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
+  Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-const divnum1 = 25
-const divnum2 = 5
+let x2 = 15
 
-if (divnum1 % divnum2 === 0) {
-  console.log('Divisibile per 5')
+if (x2 % 5 === 0) {
+  console.log('divisibile per 5')
 }
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-const numb1 = 8
-const numb2 = 0
+let y1 = 10
+let y2 = 2
 
-if (numb1 === 8 || numb2 === 8 || numb1 - numb2 === 8 || numb1 + numb2 === 8) {
-  console.log('Sono uguale a 8')
+if (y1 === 8 || y2 === 8 || y1 + y2 === 8 || y1 - y2 === 8 || y2 - y1 === 8) {
+  console.log('verificato')
 }
 
 /* ESERCIZIO 5
@@ -48,38 +50,31 @@ if (numb1 === 8 || numb2 === 8 || numb1 - numb2 === 8 || numb1 + numb2 === 8) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-const totalShoppingCart = 55
-const shippingCost = 10
-let total = 0
+let totalShoppingCart = 65
+let shippingCost = 10
+let amountToPay = totalShoppingCart
 
-if (totalShoppingCart > 50) {
-  console.log('FreeShipping')
-  total = totalShoppingCart
-} else {
-  console.log('10€ shipping')
-  total = totalShoppingCart + shippingCost
+if (totalShoppingCart < 50) {
+  amountToPay += shippingCost
 }
 
-console.log('Il totale da pagare è ' + total)
+console.log('Totale da pagare:', amountToPay)
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-const totalShoppingCart2 = 55
-const shippingCost2 = 10
-let total2 = 0
+let totalShoppingCart2 = 65
+totalShoppingCart2 = totalShoppingCart2 * 0.8
+let shippingCost2 = 10
+let amountToPay2 = totalShoppingCart2
 
-if (totalShoppingCart2 * 0.8 > 50) {
-  // il cliente ha diritto alle spese di spedizione gratuite
-  total2 = totalShoppingCart2
-} else {
-  // il cliente paga le spese di spedizione
-  total2 = totalShoppingCart2 + shippingCost2
+if (totalShoppingCart2 < 50) {
+  amountToPay2 += shippingCost2
 }
 
-console.log('Il totale da pagare è ' + total2)
+console.log('Totale da pagare:', amountToPay2)
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -117,33 +112,24 @@ if (z1 >= z2) {
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-const numero = 20
-const stringa = 'Ciao'
-const booleano = true
+let test = 'Ciao'
 
-console.log(typeof numero)
-console.log(typeof stringa)
-console.log(typeof booleano)
-
-// if (typeof fornito === 'number' && !isNaN(fornito)) {
-//   console.log('il valore fornito è un numero!')
+if (typeof test === 'number') {
+  console.log('è un numero!')
+} else {
+  console.log('non è un numero!')
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-const number = 10
-const number1 = 13
+let test2 = 31
 
-if (number % 2 === 0) {
-  console.log(number + ' è un numero pari.')
+if (test2 % 2 === 0) {
+  console.log('è un numero pari!')
 } else {
-  console.log(number + ' è un numero dispari.')
-}
-if (number1 % 2 === 0) {
-  console.log(number1 + ' è un numero pari.')
-} else {
-  console.log(number1 + ' è un numero dispari.')
+  console.log('è un numero dispari!')
 }
 
 /* ESERCIZIO 10
@@ -158,7 +144,7 @@ if (number1 % 2 === 0) {
     }
 */
 
-let val = 4
+let val = 7
 if (val < 5) {
   console.log('Meno di 5')
 } else if (val < 10) {
@@ -171,14 +157,13 @@ if (val < 5) {
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
-let me = {
+const me = {
   name: 'John',
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
 }
 
 me.city = 'Toronto'
-
 console.log(me)
 
 /* ESERCIZIO 12
@@ -189,51 +174,32 @@ delete me.lastName
 console.log(me)
 
 /* ESERCIZIO 13
-  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
+Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-me.skills.splice(2)
-// oppure me.skills.pop()
+me.skills.pop()
 console.log(me)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
-let array = null
-array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// oppure const arr = []
-// arr.push(1)
-// arr.push(2)
-// arr.push(3)
-// arr.push(4)
-// arr.push(5)
-// arr.push(6)
-// arr.push(7)
-// arr.push(8)
-// arr.push(9)
-// arr.push(10)
-
-// oppure
-// arr.push(1,2,3,4,5,6,7,8,9,10)
+let myArray = []
+myArray.push(1)
+myArray.push(2)
+myArray.push(3)
+myArray.push(4)
+myArray.push(5)
+myArray.push(6)
+myArray.push(7)
+myArray.push(8)
+myArray.push(9)
+myArray.push(10)
+console.log(myArray)
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-array.splice(9, 1, 100)
-console.log(array)
-
-// // oppure
-
-// arr.splice(9, 1, 100)
-// // o
-// arr.pop()
-// arr.push(100)
-// // o
-// arr[9] = 100
-// // o
-// delete arr[9]
-// arr[9] = 100
-// // o
-// arr[arr.length - 1] = 100
+myArray[9] = 100
+console.log(myArray)
