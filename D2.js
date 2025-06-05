@@ -76,7 +76,7 @@ if (totalShoppingCart2 * 0.8 > 50) {
   total2 = totalShoppingCart2
 } else {
   // il cliente paga le spese di spedizione
-  total2 = totalShoppingCart2 + shippingCost2
+  total2 = totalShoppingCart2 * 0.8 + shippingCost2
 }
 
 console.log('Il totale da pagare è ' + total2)
